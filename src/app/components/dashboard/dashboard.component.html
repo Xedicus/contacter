@@ -1,0 +1,46 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+  <div class="search-bar">
+    <mat-form-field>
+      <input matInput 
+             [(ngModel)]="searchTerm" 
+             (ngModelChange)="onSearch()"
+             placeholder="Rechercher un contact">
+    </mat-form-field>
+    <button mat-raised-button 
+    color="primary"
+    routerLink="/contacts/new">
+      Ajouter un contact
+    </button>
+  </div>
+
+  <div class="contacts-grid">
+    <mat-card *ngFor="let contact of contacts" class="contact-card">
+      <img [src]="contact.photo" alt="Photo" class="contact-photo">
+      <mat-card-content>
+        <h3>{{ contact.first_name }} {{ contact.last_name }}</h3>
+        <p>{{ contact.email }}</p>
+        <div class="actions">
+          
+          <button mat-icon-button [routerLink]="['/contacts', contact.id]">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          
+          <button mat-icon-button [routerLink]="['/contacts', contact.id, 'edit']">
+            <mat-icon>edit</mat-icon>
+          </button>
+         
+          <button mat-icon-button (click)="deleteContact(contact.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-paginator [length]="totalItems"
+                 [pageSize]="pageSize"
+                 [pageIndex]="currentPage - 1"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>

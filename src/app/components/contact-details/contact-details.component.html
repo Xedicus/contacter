@@ -1,0 +1,20 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="container">
+  <mat-card *ngIf="contact" class="detail-card">
+    <img [src]="contact.photo || 'assets/default-avatar.png'" 
+         alt="Photo" 
+         class="contact-photo">
+
+    <mat-card-content>
+      <h2>{{ contact.first_name }} {{ contact.last_name }}</h2>
+      <p><mat-icon>email</mat-icon> <strong>Email:</strong> {{ contact.email }}</p>
+      <p><mat-icon>phone</mat-icon> <strong>Téléphone:</strong> {{ contact.phone || 'Non renseigné' }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button routerLink="/dashboard">Retour</button>
+      <button mat-raised-button [routerLink]="['/contacts', contact.id, 'edit']">Modifier</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

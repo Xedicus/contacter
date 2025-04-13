@@ -1,0 +1,41 @@
+.container {
+    padding: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  
+    mat-form-field {
+      flex-grow: 1;
+    }
+  }
+  
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-card {
+    transition: transform 0.3s;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    .contact-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  }

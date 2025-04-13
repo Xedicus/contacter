@@ -1,0 +1,38 @@
+<mat-card class="login-card">
+  <mat-card-header>
+    <mat-card-title class="title">
+      {{ isRegisterMode ? 'Inscription' : 'Connexion' }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" type="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [(ngModel)]="password" name="password" type="password" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" *ngIf="isRegisterMode">
+        <mat-label>URL de la photo</mat-label>
+        <input matInput [(ngModel)]="photo" name="photo" />
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+          {{ loading ? 'Chargement...' : (isRegisterMode ? 'S\'inscrire' : 'Se connecter') }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions class="card-actions">
+    <button mat-button color="accent" (click)="toggleMode()">
+      {{ isRegisterMode ? 'Déjà un compte ? Se connecter' : 'Créer un compte' }}
+    </button>
+  </mat-card-actions>
+</mat-card>

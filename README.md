@@ -1,65 +1,38 @@
-Contacter
+# Contacter
+
 Contacter est une application web développée avec Angular, permettant de gérer facilement une liste de contacts grâce à une API externe.
 
-📝 Description
-Cette application offre aux utilisateurs la possibilité de :
+## 📝 Description
 
-S’enregistrer avec un identifiant et un mot de passe.
+Cette application permet aux utilisateurs de :
+- S’enregistrer avec un identifiant et un mot de passe.
+- Se connecter pour accéder à leur liste de contacts.
+- Créer, modifier et supprimer des contacts via l’API : [https://www.api.4gul.kanemia.com/](https://www.api.4gul.kanemia.com/).
 
-Se connecter pour accéder à l’espace contacts.
+## 🚀 Fonctionnalités
 
-Créer, modifier et supprimer des contacts via l’API : https://www.api.4gul.kanemia.com/.
+- Authentification sécurisée.
+- Inscription utilisateur.
+- Création de contacts.
+- Modification de contacts.
+- Suppression de contacts.
+- Interface moderne grâce à Angular Material.
 
-🚀 Fonctionnalités
-Authentification sécurisée.
+## 🧑‍💻 Technologies utilisées
 
-Inscription utilisateur.
+- Angular
+- Angular Material
 
-Création de contacts.
+## ⚙️ Installation
 
-Modification de contacts.
+1. Clonez le dépôt (une fois que le dépôt GitHub sera créé) :
+   git clone https://github.com/votre-username/contacter.git
+2. Installer les dépendances
+    npm install
+3. Lancer le serveur 
+   ng serve
+4. Ouvrez votre navigateur a l'adresse 
+   http://localhost:4200
 
-Suppression de contacts.
 
-Interface moderne grâce à Angular Material.
-
-🧑‍💻 Technologies utilisées
-Angular
-
-Angular Material
-
-⚙️ Installation
-Clonez le dépôt (à faire une fois que le projet sera sur GitHub) :
-
-bash
-Copier
-Modifier
-git clone https://github.com/votre-username/contacter.git
-Installez les dépendances :
-
-bash
-Copier
-Modifier
-npm install
-Lancez le serveur de développement :
-
-bash
-Copier
-Modifier
-ng serve
-Accédez à l’application :
-
-arduino
-Copier
-Modifier
-http://localhost:4200
-💡 Utilisation
-Enregistrez-vous via la page d'inscription.
-
-Connectez-vous avec vos identifiants.
-
-Gérez vos contacts (ajout, modification, suppression).
-
-🙌 Crédits
-Développé avec ❤️ par Kevin Olinga.
 
